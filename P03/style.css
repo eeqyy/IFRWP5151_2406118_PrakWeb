@@ -1,0 +1,155 @@
+/* Reset */
+* {
+margin: 10;
+padding-right: 20;
+box-sizing: border-box;
+}
+body {
+font-family: monospace, jakarta, sans-serif;
+background-color: rgb(255, 228, 186);
+color: rgb(253, 240, 213);
+line-height: 1.6;
+padding: auto;
+margin: auto;
+}
+/* Header */
+body > header {
+background-color: rgb(102, 155, 188);
+margin: 10;
+border-bottom: 3px solid #bd0606;
+
+}
+body > header h1 {
+max-width: auto;
+margin: auto;
+text-align: center;
+}
+/* Navigation */
+nav {
+max-width: auto;
+margin: auto;
+align-content: center;
+}
+nav ul {
+display: flex;
+gap: 20px;
+list-style: none;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    max-width: auto;
+}
+nav a:hover {
+    color: #bd0606;
+}
+/* Main */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 10px;
+}
+section {
+    background-color: rgb(102, 155, 188);
+    padding: 25px;
+    border: 3px solid #bd0606;
+}
+/* Gambar */
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+/* Judul */
+h2 {
+    margin-bottom: 15px;
+    color: #bd0606;
+}
+h3 {
+    margin-bottom: 5px;
+    color: #386ab6;
+    border-bottom: 1px solid #bd0606;
+}
+/* Project */
+#project {
+margin-top: 30px;
+align-items: center;
+}
+article {
+padding: 15px 0;
+}
+article:last-child {
+border-bottom: none;
+}
+/* Form */
+form {
+margin-top: 20px;
+}
+form p {
+margin-bottom: 15px;
+}
+label {
+display: inline-block;
+margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+width: 100%;
+padding: 9px;
+border: 2px solid #bd0606;
+font-family: monserat, jakarta, sans-serif;
+}
+textarea {
+resize: vertical;
+}
+button {
+padding: 9px 15px;
+border: none;
+background-color: #ffffff;
+color: #bd0606;
+cursor: pointer;
+}
+button[type="reset"] {
+background-color: #ffffff;
+}
+button:hover {
+opacity: 0.8;
+}
+/* Aside */
+aside {
+max-width: 900px;
+margin: 30px auto;
+padding: 20px;
+background-color: white;
+border: 3px solid #bd0606;
+}
+/* Footer */
+footer {
+padding: 20px;
+text-align: center;
+color: #df6f3b;
+font-size: 14px;
+}
+/* Garis <hr> */
+hr {
+display: none;
+}
+/* Tampilan HP */
+@media (max-width: 700px) {
+nav ul {
+flex-direction: column;
+gap: 8px;
+}
+main {
+margin-top: 20px;
+}
+main img {
+margin: 0 auto;
+}
+section {
+padding: 20px;
+}
+}
