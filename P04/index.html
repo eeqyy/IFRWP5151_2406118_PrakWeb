@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Proyek - Modul 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Portofolio Proyek</h1>
+    <p class="subtitle">
+      Modul 4: Dasar Logika Pemrograman dengan JavaScript
+    </p>
+
+    <!-- Kartu Ringkasan Statistik -->
+    <section class="stats-grid" aria-label="Ringkasan statistik proyek">
+      <div class="stat-card">
+        <h3>Total Proyek</h3>
+        <p id="stat-total-projects">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Anggaran</h3>
+        <p id="stat-total-budget">Rp 0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Selesai Dikerjakan</h3>
+        <p id="stat-completed-projects">0</p>
+      </div>
+    </section>
+
+    <!-- Tombol Filter Kategori -->
+    <section class="filter-group" aria-label="Filter kategori proyek">
+      <button class="btn-filter active" type="button" data-category="Semua">
+        Semua Proyek
+      </button>
+      <button class="btn-filter" type="button" data-category="Web App">
+        Web App
+      </button>
+      <button class="btn-filter" type="button" data-category="Desktop App">
+        Desktop App
+      </button>
+      <button class="btn-filter" type="button" data-category="Mobile App">
+        Mobile App
+      </button>
+    </section>
+
+    <!-- Kontener Daftar Proyek -->
+    <section id="project-list" aria-label="Daftar proyek"></section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
