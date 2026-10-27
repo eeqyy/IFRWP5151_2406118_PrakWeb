@@ -2,57 +2,65 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Proyek - Modul 4</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mahasiswa - Beranda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main class="container">
-    <h1>Portofolio Proyek</h1>
-    <p class="subtitle">
-      Modul 4: Dasar Logika Pemrograman dengan JavaScript
-    </p>
+    <header>
+        <h1>Portofolio Pengembang Web</h1>
 
-    <!-- Kartu Ringkasan Statistik -->
-    <section class="stats-grid" aria-label="Ringkasan statistik proyek">
-      <div class="stat-card">
-        <h3>Total Proyek</h3>
-        <p id="stat-total-projects">0</p>
-      </div>
-      <div class="stat-card">
-        <h3>Total Anggaran</h3>
-        <p id="stat-total-budget">Rp 0</p>
-      </div>
-      <div class="stat-card">
-        <h3>Selesai Dikerjakan</h3>
-        <p id="stat-completed-projects">0</p>
-      </div>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="skill.html">Keahlian</a></li>
+                <li><a href="educational.html">Pendidikan</a></li>
+                <li><a href="experience.html">Pengalaman</a></li>
+                <li><a href="project.html">Proyek</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Tombol Filter Kategori -->
-    <section class="filter-group" aria-label="Filter kategori proyek">
-      <button class="btn-filter active" type="button" data-category="Semua">
-        Semua Proyek
-      </button>
-      <button class="btn-filter" type="button" data-category="Web App">
-        Web App
-      </button>
-      <button class="btn-filter" type="button" data-category="Desktop App">
-        Desktop App
-      </button>
-      <button class="btn-filter" type="button" data-category="Mobile App">
-        Mobile App
-      </button>
-    </section>
+    <main>
 
-    <!-- Kontener Daftar Proyek -->
-    <section id="project-list" aria-label="Daftar proyek"></section>
-  </main>
+        <section>
+            <h2>Selamat Datang</h2>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+            <p>
+                Halo! Selamat datang di website portofolio saya.
+                Website ini berisi informasi mengenai proyek yang
+                pernah saya kerjakan dengan fitur manajemen proyek.
+            </p>
+        </section>
+
+        <section>
+            <h2>Proyek Unggulan</h2>
+
+            <article>
+                <h3>Kelola Proyek Anda</h3>
+                <p>
+                    Tambahkan, cari, filter, ubah status, dan hapus proyek
+                    melalui halaman proyek dengan fitur interaktif JavaScript.
+                </p>
+            </article>
+
+            <p>
+                <a href="project.html">Kelola Proyek</a>
+            </p>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Portofolio Mahasiswa - All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>

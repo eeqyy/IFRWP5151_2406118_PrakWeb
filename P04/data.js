@@ -6,7 +6,7 @@
  * Daftar proyek portofolio.
  * @type {Array<{id:number, title:string, category:string, budget:number, completed:boolean}>}
  */
-const projects = [
+let projects = [
   {
     id: 1,
     title: "Sistem Inventaris Keuangan",
@@ -57,8 +57,9 @@ const formatRupiah = (angka) => {
   }).format(angka);
 };
 
-// Ekspor untuk Node.js (dibaca via require di olah_data.js).
-// Di browser, `module` tidak terdefinisi sehingga blok ini dilewati.
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { projects, formatRupiah };
+} else {
+  window.projects = projects;
+  window.formatRupiah = formatRupiah;
 }
