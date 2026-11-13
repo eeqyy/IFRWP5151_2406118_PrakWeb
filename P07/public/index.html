@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Mahasiswa - CRUD Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portofolio Pengembang Web</h1>
+
+    <nav class="portfolio-nav">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Saya</a></li>
+        <li><a href="skill.html">Keahlian</a></li>
+        <li><a href="educational.html">Pendidikan</a></li>
+        <li><a href="experience.html">Pengalaman</a></li>
+        <li><a href="project.html">Proyek</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <div class="container">
+    <header class="page-header">
+      <h2>Aplikasi CRUD Mahasiswa</h2>
+      <p class="subtitle">Full-Stack JavaScript + MySQL (Laragon)</p>
+    </header>
+
+    <!-- Fitur 3: Indikator Counter Total Mahasiswa -->
+    <div class="counter-bar">
+      <span id="totalCounter">Total Mahasiswa Terdaftar: 0 Orang</span>
+    </div>
+
+    <!-- Form Input Mahasiswa -->
+    <form id="mahasiswaForm" class="mahasiswa-form" novalidate>
+      <h2 id="formTitle">Tambah Mahasiswa Baru</h2>
+      <input type="hidden" id="mahasiswaId" name="id">
+
+      <div class="form-group">
+        <label for="nim">NIM *</label>
+        <input type="text" id="nim" name="nim" placeholder="Contoh: 2023001" required maxlength="20">
+        <span class="error-text" id="nimError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="nama">Nama Lengkap *</label>
+        <input type="text" id="nama" name="nama" placeholder="Contoh: Ahmad Fauzi" required maxlength="100">
+        <span class="error-text" id="namaError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="jurusan">Jurusan *</label>
+        <select id="jurusan" name="jurusan" required>
+          <option value="">-- Pilih Jurusan --</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Komputer">Teknik Komputer</option>
+          <option value="Manajemen Informatika">Manajemen Informatika</option>
+          <option value="Ilmu Komputer">Ilmu Komputer</option>
+        </select>
+        <span class="error-text" id="jurusanError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Contoh: ahmad@student.univ.ac.id" maxlength="100">
+        <span class="error-text" id="emailError"></span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="btnSubmit" class="btn btn-primary">Tambah Mahasiswa</button>
+        <button type="button" id="btnCancel" class="btn btn-secondary" style="display: none;">Batal Edit</button>
+      </div>
+    </form>
+
+    <!-- Fitur 1: Kolom Pencarian Real-Time -->
+    <div class="search-bar">
+      <label for="searchInput">Cari Mahasiswa:</label>
+      <input type="text" id="searchInput" placeholder="Ketik NIM, Nama, atau Jurusan..." autocomplete="off">
+    </div>
+
+    <!-- Tabel Data Mahasiswa -->
+    <div class="table-container">
+      <table id="mahasiswaTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Jurusan</th>
+            <th>Email</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Data akan dirender oleh JavaScript -->
+        </tbody>
+      </table>
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <p>Belum ada data mahasiswa. Tambahkan data baru di formulir di atas.</p>
+      </div>
+    </div>
+
+    <!-- Status Message -->
+    <div id="statusMessage" class="status-message"></div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Portofolio Mahasiswa - All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
